@@ -2,6 +2,7 @@ from selene import browser, have, by
 from picture import resources
 from data.user_data import User
 
+
 class RegistrationPage:
 
     def open(self):
@@ -45,5 +46,5 @@ class RegistrationPage:
                 user.picture,
                 user.address,
                 f'{user.state} {user.city}'
+            )
         )
-    )
