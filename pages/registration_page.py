@@ -1,6 +1,7 @@
 from selene import browser, by, have
 from picture import resources
 
+
 class RegistrationPage:
 
     def open(self):
@@ -51,8 +52,8 @@ class RegistrationPage:
     def click_submit(self):
         browser.element('#submit').press_enter()
 
-
-    def should_registered_user_with(self, full_name, email, gender, phone_number, date_of_birth, subj, hobby, picture, curr_address,
+    def should_registered_user_with(self, full_name, email, gender, phone_number, date_of_birth, subj, hobby, picture,
+                                    curr_address,
                                     state_city):
         browser.element('.table').all('td').even.should(
             have.exact_texts(

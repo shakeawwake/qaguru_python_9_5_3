@@ -1,9 +1,8 @@
 from pages.registration_page import RegistrationPage
 
-def test_demo_qa(start_settings_google):
 
+def test_demo_qa(settings):
     registration_page = RegistrationPage()
-    # open registration form
     registration_page.open()
 
     # WHEN
@@ -23,14 +22,14 @@ def test_demo_qa(start_settings_google):
 
     # THEN
     registration_page.should_registered_user_with(
-            'TestName TestLastName',
-            'test@user.test',
-            'Female',
-            '8916506361',
-            '03 July,1994',
-            'English',
-            'Sports',
-            'logo.png',
-            'TestAdress',
-            'NCR Gurgaon'
+        'TestName TestLastName',
+        'test@user.test',
+        'Female',
+        '8916506361',
+        '03 July,1994',
+        'English',
+        'Sports',
+        'logo.png',
+        'TestAdress',
+        'NCR Gurgaon'
     )
